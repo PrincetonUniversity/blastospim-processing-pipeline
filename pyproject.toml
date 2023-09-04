@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "blastospim-download"
+version = "1.2"
+description = "Downloads all the data files required to run a test example of the BLASTOSPIM Instance Segmentation and Tracking Pipeline."
+authors = [
+  {name="Abhishek Biswas", email="ab50@princeton.edu"},
+]
+readme = "README.md"
+homepage = "https://github.com/abiswas-odu/blastospim-processing"
+repository = "https://github.com/abiswas-odu/blastospim-processing.git"
+keywords= ["BLASTOSPIM", "Test Example"]
+requires-python = ">=3.9"
+dependencies = ["gdown>=4.7.1", "requests"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.scripts]
+blastospim-download = "blastospim_download.__main__:main"
+
+[tool.coverage.paths]
+source = ["src"]
