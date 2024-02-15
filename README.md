@@ -10,9 +10,9 @@ You can run the following commands to install the tool in your own machine.
 
 2. Open "Command Prompt" and create a conda environment and activate it:
 ```
-CONDA_OVERRIDE_CUDA="11.2" conda create -n tf2-segmentation "tensorflow==2.11.1=cuda112*" --channel conda-forge
+CONDA_OVERRIDE_CUDA="11.2" conda create -n tf2-segmentation python=3.9 "tensorflow==2.11.1=cuda112*" --channel conda-forge
 conda activate tf2-segmentation
-pip install stardist_inference @ git+https://github.com/abiswas-odu/stardist_inference.git
+pip install "stardist_inference @ git+https://github.com/abiswas-odu/stardist_inference.git"
 ```
 
 ### Download and Run Test Example
@@ -23,7 +23,7 @@ To download the example execute the following commands:
 
 ```commandline
 conda activate tf2-segmentation
-pip install blastospim_download @ git+https://github.com/abiswas-odu/blastospim_download.git
+pip install "blastospim_download @ git+https://github.com/PrincetonUniversity/blastospim-processing-pipeline.git"
 cd blastospim_download
 mkdir test
 cd test 
