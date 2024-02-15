@@ -27,7 +27,7 @@ pip install "blastospim_download @ git+https://github.com/PrincetonUniversity/bl
 cd blastospim_download
 mkdir test
 cd test 
-blastospim_download
+blastospim-download
 ```
 
 The commands will create a test directory and download 3 compressed folders and uncompress them in the current folder. The folders are:
