@@ -1,4 +1,13 @@
-# BLASTOSPIM Instance Segmentation and Tracking Pipeline
+
+The  BLASTOSPIM Instance Segmentation and Tracking Pipeline can be run by installing the software packages or by using Jupyter notebooks.
+
+# Running BLASTOSPIM with Jupyter notebooks
+
+Follow the instructions here to use the [Jupyter notebooks](https://github.com/haysconun/blastospim-processing-pipeline-Jupyter).
+
+# Full BLASTOSPIM Install  
+
+Follow the steps below to install of the full pipeline and run a sample dataset.
 
 ## Step 1: Segmentation of Images
 

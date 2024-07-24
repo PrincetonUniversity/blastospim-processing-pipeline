@@ -3,4 +3,4 @@ logo: /doc_images/fucci_SOX_stack1.gif
 description: Robust 3D Nuclear Instance Segmentation of the Early Mouse Embryo
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-hacker
+theme: jekyll-theme-minimal
