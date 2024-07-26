@@ -179,7 +179,7 @@ to the next and 3 more plots will be opened. So, it is recommended to manage the
 closing the previous ones. 
 ![Tracking View](./doc_images/track_view.jpg "Tracking View")
 
-### Extracting intensities from registered images
+## Step 4: Extracting Intensities from Tracked Images
 
 To extract the intensity signals we use a python package that automatically aligns camera between the long short cameras used to capture the nuclear and transcription factor intensities. 
 
