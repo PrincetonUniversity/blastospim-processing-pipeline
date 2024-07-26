@@ -46,6 +46,7 @@ The commands will create a test directory and download 3 compressed folders and 
     - Expected_Segmentation : The segmentation output that should be produced using the early stage model. 
     - Corrected_Segmentation : The expert corrected segmentation produced using AnnotatorJ.
     - Expected_Track : The config.yaml file and the expected registration transforms and tree.
+    - Extract_Align : A test example that extracts intensity data from the CDX2 transcription factor channel based on the segmentation mask on the nuclear channel after appropriate alignment. 
 2. **early_embryo_model**: The early model to be used for inference if the images have less than 45-50 cells.  
 3. **late_embryo_model**: The late model to be used for inference if the images have greater than 45-50 cells.
 
@@ -178,4 +179,24 @@ to the next and 3 more plots will be opened. So, it is recommended to manage the
 closing the previous ones. 
 ![Tracking View](./doc_images/track_view.jpg "Tracking View")
 
+### Extracting intensities from registered images
 
+To extract the intensity signals we use a python package that automatically aligns camera between the long short cameras used to capture the nuclear and transcription factor intensities. 
+
+1. Run the following commands to clone the repository:
+```commandline
+cd blastospim_download
+git clone https://github.com/abiswas-odu/Mouse_embryo_analysis_ab_fork.git
+```
+
+2. Change to the `Mouse_embryo_analysis_ab_fork` directory and you can run the CLI help:
+```commandline
+conda activate tf2-segmentation
+python python tf_extract.py tf-align-simple --help
+```
+
+3. To run the sample example execute the command:
+```commandline
+tf-align-simple --nucl_image_dir ..\test\Extract_Align\nuclei --nucl_seg_dir ..\test\Extract_Align\nuclei_seg --tf_signal_image_dir ..\test\Extract_Align\tf --crop_dir ..\test\Extract_Align\crop_dir --cropbox_index 70 --out_dir ..\test\Extract_Align\output --out_prefix align_test --timestamp_min 70 --timestamp_max 71 --align_camera_timestamps 70 --offset 150 --cell_volume_cutoff 4000 --max_margin 2048 --align_camera 1 --max_absolute_shift 50 --x_shift_override 10 --y_shift_override 10
+```
+The output produced should match the result in the ``Extract_Align\expected_output``.

@@ -16,8 +16,8 @@ def main():
     z.extractall('.')
 
     ## Download the Test Data
-    test_data_url = "https://drive.google.com/uc?id=1Vvzcj_Q_ERXsWqsbCfnk23wWdnz1vzWD"
-    output_zip = 'toy_data_v1.0.tgz'
+    test_data_url = "https://drive.google.com/uc?id=1nsyIaZQ6HnAWD7YH-jkRBPfoEPfY9urg"
+    output_zip = 'toy_data_v1.1.tgz'
     gdown.download(test_data_url, output_zip, quiet=False)
     test_data_file = tarfile.open(output_zip)
     # extracting file
