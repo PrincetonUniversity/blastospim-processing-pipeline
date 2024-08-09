@@ -1,6 +1,8 @@
 
 The  BLASTOSPIM Instance Segmentation and Tracking Pipeline can be run by installing the software packages or by using Jupyter notebooks.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13286318.svg)](https://doi.org/10.5281/zenodo.13286318)
+
 # Running BLASTOSPIM with Jupyter notebooks
 
 Follow the instructions here to use the [Jupyter notebooks](https://github.com/haysconun/blastospim-processing-pipeline-Jupyter).
